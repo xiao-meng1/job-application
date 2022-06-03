@@ -1,0 +1,26 @@
+html, body, body>div, .app {
+  margin: 0;
+  height: 100%
+}
+
+html {
+  font-family: Helvetica, sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background-color:rgb(233, 239, 241);
+}
+
+.section {
+  width: 900px;
+  background-color: white;
+  box-shadow: grey 1px 5px 8px;
+}

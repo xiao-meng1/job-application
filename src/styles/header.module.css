@@ -1,0 +1,10 @@
+.header {
+  position: sticky;
+  padding: 10px;
+  box-shadow: grey 1px 1px 8px;
+}
+
+.text {
+  margin: 0;
+  font-size: 30px;
+}
