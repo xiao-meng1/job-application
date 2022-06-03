@@ -21,6 +21,27 @@ html {
 
 .section {
   width: 900px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   background-color: white;
   box-shadow: grey 1px 5px 8px;
+}
+
+.h3 {
+  margin: 10px 30px;
+  font-size: 20px;
+}
+
+.article {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding-bottom: 30px;
+}
+
+.h2 {
+  text-align: center;
+}
+
+.container {
+  padding: 0 30px;
 }

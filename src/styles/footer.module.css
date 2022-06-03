@@ -1,0 +1,9 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+  display: grid;
+  padding: 10px 30px;
+  background-color: white;
+  box-shadow: grey 1px 1px 8px;
+  clip-path: inset(-10px 0px 0px 0px);
+}

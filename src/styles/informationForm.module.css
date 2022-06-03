@@ -1,0 +1,21 @@
+.fieldset {
+  display: grid;
+  grid-template-columns: auto;
+  border: none;
+}
+
+.input {
+  margin-bottom: 10px;
+  height: 20px;
+  width: 50%;
+}
+
+.text-area {
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
