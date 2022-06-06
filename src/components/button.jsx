@@ -4,10 +4,14 @@ import styles from '../styles/button.module.css';
 
 class Button extends Component {
   render() {
-    const { textContent, className } = this.props;
+    const { textContent, className, onButtonClick } = this.props;
 
     return (
-      <button type="button" className={styles[className]}>
+      <button
+        type="button"
+        className={styles[className]}
+        onClick={onButtonClick}
+      >
         {textContent}
       </button>
     );
@@ -17,11 +21,13 @@ class Button extends Component {
 Button.defaultProps = {
   textContent: 'Button Text',
   className: 'button',
+  onButtonClick: () => {},
 };
 
 Button.propTypes = {
   textContent: PropTypes.string,
   className: PropTypes.string,
+  onButtonClick: PropTypes.func,
 };
 
 export default Button;

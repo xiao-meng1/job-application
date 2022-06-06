@@ -11,6 +11,8 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.setPage = this.setPage.bind(this);
+
     this.state = {
       page: 'My Information',
       applicantInformation: {
@@ -58,6 +60,29 @@ class App extends Component {
     };
   }
 
+  setPage(e) {
+    const { page } = this.state;
+    let newPageName;
+
+    switch (e.target.textContent) {
+      case 'Save and Continue':
+        newPageName = 'Review';
+        break;
+      case 'Back':
+        newPageName = 'My Information';
+        break;
+      case 'Submit':
+        newPageName = 'Submitted';
+        break;
+      default:
+        newPageName = page;
+    }
+
+    this.setState({
+      page: newPageName,
+    });
+  }
+
   render() {
     const { page, applicantInformation } = this.state;
 
@@ -95,7 +120,7 @@ class App extends Component {
               </div>
             </article>
             {page === 'My Information' || page === 'Review' ? (
-              <Footer page={page} />
+              <Footer page={page} setPage={this.setPage} />
             ) : null}
           </section>
         </main>
