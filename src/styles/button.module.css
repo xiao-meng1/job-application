@@ -2,3 +2,13 @@
   font-size: 16px;
   justify-self: end;
 }
+
+.back {
+  font-size: 16px;
+  justify-self: start;
+}
+
+.submit {
+  font-size: 16px;
+  justify-self: start
+}
