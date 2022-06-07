@@ -5,7 +5,7 @@ import styles from '../styles/footer.module.css';
 
 class Footer extends Component {
   render() {
-    const { page, setPage } = this.props;
+    const { page, updatePage } = this.props;
     const buttons = [];
     let footerClass;
 
@@ -13,28 +13,31 @@ class Footer extends Component {
       footerClass = 'my-information';
       buttons.push(
         <Button
+          name="save and continue"
           key="0"
           textContent="Save and Continue"
           className="save-and-continue"
-          onButtonClick={setPage}
+          onButtonClick={updatePage}
         />
       );
     } else if (page === 'Review') {
       footerClass = 'review';
       buttons.push(
         <Button
+          name="back"
           key="0"
           textContent="Back"
           className="back"
-          onButtonClick={setPage}
+          onButtonClick={updatePage}
         />
       );
       buttons.push(
         <Button
+          name="submit"
           key="1"
           textContent="Submit"
           className="submit"
-          onButtonClick={setPage}
+          onButtonClick={updatePage}
         />
       );
     }
@@ -49,12 +52,12 @@ class Footer extends Component {
 
 Footer.defaultProps = {
   page: 'My Information',
-  setPage: () => {},
+  updatePage: () => {},
 };
 
 Footer.propTypes = {
   page: PropTypes.string,
-  setPage: PropTypes.func,
+  updatePage: PropTypes.func,
 };
 
 export default Footer;
