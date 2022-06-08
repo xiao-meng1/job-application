@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/button.module.css';
 
-class Button extends Component {
-  render() {
-    const { name, textContent, className, onButtonClick } = this.props;
+function Button(props) {
+  const { name, textContent, className, onButtonClick } = props;
 
-    return (
-      <button
-        name={name}
-        type="button"
-        className={styles[className]}
-        onClick={onButtonClick}
-      >
-        {textContent}
-      </button>
-    );
-  }
+  return (
+    <button
+      name={name}
+      type="button"
+      className={styles[className]}
+      onClick={onButtonClick}
+    >
+      {textContent}
+    </button>
+  );
 }
 
 Button.defaultProps = {

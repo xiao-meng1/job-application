@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/header.module.css';
 
-class Header extends Component {
-  render() {
-    const { textContent } = this.props;
-    return (
-      <header className={styles.header}>
-        <h1 className={styles.text}>{textContent}</h1>
-      </header>
-    );
-  }
+function Header(props) {
+  const { textContent } = props;
+  return (
+    <header className={styles.header}>
+      <h1 className={styles.text}>{textContent}</h1>
+    </header>
+  );
 }
 
 Header.defaultProps = {
